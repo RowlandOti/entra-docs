@@ -6,7 +6,7 @@ editor: billmath
 ms.subservice: hybrid-connect
 ms.tgt_pltfrm: na
 ms.topic: how-to
-ms.date: 04/09/2025
+ms.date: 09/10/2026
 ---
 
 # Diagnose and remediate duplicated attribute sync errors
@@ -35,7 +35,7 @@ As an example, the existing object in Microsoft Entra ID preserves the license o
 
 ![Diagnose sync error orphaned object scenario](./media/how-to-connect-health-diagnose-sync-errors/IIdFixOrphanedCase.png)
 
-## Diagnostic and troubleshooting steps in Connect Health 
+## Diagnostic and troubleshooting steps in Connect Health
 The diagnose feature supports user objects with the following duplicated attributes:
 
 | Attribute name | Synchronization error types|
@@ -51,26 +51,28 @@ The diagnose feature supports user objects with the following duplicated attribu
 
 Follow the steps from the [Microsoft Entra admin center](https://entra.microsoft.com) to narrow down the sync error details and provide more specific solutions:
 
-![Sync error diagnosis steps](./media/how-to-connect-health-diagnose-sync-errors/IIdFixSteps.png)
-
 From the [Microsoft Entra admin center](https://entra.microsoft.com), take a few steps to identify specific fixable scenarios:  
-1. Check the **Diagnose status** column. The status shows if there's a possible way to fix a sync error directly from Microsoft Entra ID. In other words, a troubleshooting flow exists that can narrow down the error case and potentially fix it.
+1. In Microsoft Entra Connect Health, select **Sync errors**, and then select the **Duplicate Attribute** category.
+1. Find the affected object. Expand the row to review its details.
+1. Select **Fix this error** to open the **Fix Synchronization Error** panel. This action is available only for supported duplicate-attribute errors.
+
+The panel can show the following statuses:
 
 | Status | What does it mean? |
 | ------------------ | -----------------|
-| Not Started | You haven't visited this diagnosis process. Depending on the diagnostic result, there's a potential way to fix the sync error directly from the portal. |
-| Manual Fix Required | The error doesn't fit the criteria of available fixes from the portal. Either conflicting object types aren't users, or you already went through the diagnostic steps, and no fix resolution was available from the portal. In the latter case, a fix from the on-premises side is still one of the solutions. [Read more about on-premises fixes](https://support.microsoft.com/help/2647098). | 
-| Pending Sync | A fix was applied. The portal is waiting for the next sync cycle to clear the error. |
+| Not Started | You haven't completed the guided process. Depending on the diagnostic result, you might be able to fix the sync error directly from Microsoft Entra ID. |
+| Manual Fix Required | The error doesn't meet the criteria for an available portal fix. For example, the conflicting objects aren't supported user objects or the guided process found no applicable fix. [Read more about on-premises fixes](https://support.microsoft.com/help/2647098). |
+| Pending Sync | A fix was applied, and the service is waiting for the next sync cycle to clear the error. |
 
   >[!IMPORTANT]
   > The diagnostic status column will reset after each sync cycle. 
   >
 
-1. Select the **Diagnose** button under the error details. You'll answer a few questions and identify the sync error details. Answers to the questions help identify an orphaned object case.
+1. In the **Identity Verification** step, answer the questions about the on-premises and Microsoft Entra objects. The answers help identify an orphaned object case.
 
-1. If a **Close** button appears at the end of the diagnostics, there's no quick fix available from the portal based on your answers. Refer to the solution shown in the last step. Fixes from on-premises are still the solutions. Select the **Close** button. The status of the current sync error switches to **Manual fix required**. The status stays during the current sync cycle.
+1. Review the proposed resolution in **Review & Apply**. If no portal fix is available based on your answers, close the panel and use the displayed manual resolution guidance. The status changes to **Manual Fix Required** for the current sync cycle.
 
-1. After an orphaned object case is identified, you can fix the duplicated attributes sync errors directly from the portal. To trigger the process, select the **Apply Fix** button. The status of the current sync error updates to **Pending sync**.
+1. If the panel identifies a supported orphaned object case, select **Apply Fix**. The status changes to **Pending Sync**.
 
 1. After the next sync cycle, the error should be removed from the list.
 

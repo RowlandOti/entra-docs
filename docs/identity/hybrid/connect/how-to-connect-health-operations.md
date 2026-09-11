@@ -28,6 +28,8 @@ You can configure the Microsoft Entra Connect Health service to send email notif
 1. Under **Custom notification emails**, add any other email addresses that should receive notifications. Use **Remove email** to remove an address.
 1. Select **Save**. Changes take effect only after you save them.
 
+![Connect Health notification settings panel, with callouts for enabling email, choosing recipients, and saving changes.](media/how-to-connect-health-operations/connect-health-notification-settings.png)
+
 >[!NOTE] 
 > When there are issues processing synchronization requests in our backend service, this service sends a notification email with the details of the error to the administrative contact email address(es) of your tenant. We heard feedback from customers that in certain cases the volume of these messages is prohibitively large so we are changing the way we send these messages. 
 >

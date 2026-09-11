@@ -23,6 +23,8 @@ To retrieve the email addresses for all of your users that are configured in Mic
 3. Select **Notification settings** on the command bar.
 4. In the notification settings panel, review whether Global Administrators receive notifications and the addresses listed under the custom email recipients section.
  
+![Connect Health notification settings panel, with callouts for enabling email, choosing recipients, and saving changes.](media/how-to-connect-health-data-retrieval/connect-health-notification-settings.png)
+
 ## Retrieve all sync errors
 
 To retrieve a list of all sync errors, use the following steps.

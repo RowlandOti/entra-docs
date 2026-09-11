@@ -63,6 +63,8 @@ This feature provides a report about synchronization errors that can occur when 
   * Side by side comparison of Objects with error due to a conflict
   * Download the error report as a CSV file
 
+![Connect Health Sync errors page, with callouts for command bar actions, error categories, and the error list.](media/how-to-connect-health-sync/connect-health-sync-errors.png)
+
 ### Categorization of Errors
 The report categorizes the existing synchronization errors in the following categories:
 

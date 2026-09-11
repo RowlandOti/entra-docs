@@ -18,6 +18,8 @@ Open [Microsoft Entra Connect Health](https://aka.ms/aadconnecthealth), select *
 * Summary cards for domain controllers, replication status, and alerts.
 * Performance charts for LDAP successful binds, NTLM authentications, and Kerberos authentications.
 
+![Connect Health AD DS service overview, with callouts for forest details, the domain controller list, and replication status.](media/how-to-connect-health-adds/connect-health-adds-overview.png)
+
 <a name='alerts-for-azure-ad-connect-health-for-ad-ds'></a>
 
 ## Alerts for Microsoft Entra Connect Health for AD DS

@@ -55,6 +55,8 @@ Open [Microsoft Entra Connect Health](https://aka.ms/aadconnecthealth), select *
 > [!IMPORTANT]
 > The Risky IP report is being deprecated. The page provides a link to the newer [Risky IP report workbook](how-to-connect-health-adfs-risky-ip-workbook.md), which supports customizable queries and expanded visualizations.
 
+![Connect Health bad IP addresses report, with callouts for the workbook migration notice, report actions, and results table.](media/how-to-connect-health-adfs-risky-ip/connect-health-adfs-bad-ip-addresses.png)
+
 ## Load balancer IP addresses in the list
 
 Your load balancer aggregate might have failed, causing it to hit the alert threshold. If you're seeing load balancer IP addresses, it's highly likely that your external load balancer isn't sending the client IP address when it passes the request to the Web Application Proxy server. Configure your load balancer correctly to pass forward the client IP address. 

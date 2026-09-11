@@ -162,6 +162,8 @@ The [Microsoft Entra Connect Health](https://aka.ms/aadconnecthealth) experience
 > [!NOTE]
 > For licensing information, see the [Microsoft Entra Connect Health FAQ](reference-connect-health-faq.yml) or the [Microsoft Entra pricing page](https://aka.ms/aadpricing).
 
+![Microsoft Entra Connect Health navigation, with callouts for service areas, Quick start resources, and configuration options.](media/how-to-connect-install-roadmap/connect-health-navigation.png)
+
 The menu includes the following options:
 
 * **Quick start**: View what's new, download the agents and Microsoft Entra Connect, open documentation, or provide feedback.
